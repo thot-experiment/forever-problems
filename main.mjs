@@ -50,7 +50,9 @@ const addTextToImage = (imageUrl, text) => {
     draw_wrapped_text(context, text, 'black', [75,415,135,55])
     draw_wrapped_text(context, text, 'white', [593,294,156,44])
     
-    document.body.appendChild(canvas)
+    const modImage = new Image()
+    modImage.src = canvas.toDataURL()
+    document.body.appendChild(modImage)
   }
 }
 
